@@ -1,0 +1,61 @@
+.screen {
+    position: absolute;
+    background-color: #0140d2;
+    opacity: 0.5;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.img_block {
+    position: absolute;
+    width: 800px;
+    height: 600px;
+    background-color: #38bafe;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.picture {
+    position: absolute;
+    z-index: 5;
+    height: 500px;
+    width: 800px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.prev,
+.next {
+    cursor: pointer;
+    position: absolute;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 16px;
+    top: 50%;
+    margin-top: -28px;
+    transition: .3s;
+    z-index: 50;
+}
+.prev:hover,
+.next:hover {
+    background-color: #222222;
+    opacity: 0.8;
+}
+
+.next {
+    right: 0;
+    border-radius: 5px 0 0 5px;
+}
+.prev {
+    left: 0;
+    border-radius: 0 5px 5px 0;
+}
+

@@ -489,6 +489,7 @@
 
 .table_doctor {
     margin-top: 30px;
+    overflow: auto;
 }
 
 table {

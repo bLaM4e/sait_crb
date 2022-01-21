@@ -202,20 +202,11 @@
     background-size: cover;
 }
 
-/*.text {*/
-/*    padding-top: 30px;*/
-/*    margin-left: 30px;*/
-/*    max-width: 700px;*/
-/*    font-family: sans-serif;*/
-/*    font-size: 20px;*/
-/*    font-weight: 500;*/
-/*}*/
-
 .main_news {
-    /*margin-top: -50px;*/
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    margin-bottom: 20px;
 }
 .main_news_block {
     flex-grow: 1;
@@ -265,6 +256,11 @@
     height: 200px;
 }
 
+.gosuslugi_wrapper {
+    border-radius: 10px;
+    overflow: hidden;
+}
+
 .useful {
     display: flex;
     flex-wrap: wrap;
@@ -308,6 +304,7 @@
 
 .map {
     border: 1px solid #ccc;
+    margin-bottom: 15px;
 }
 
 .footer {
@@ -648,20 +645,89 @@ td {
     transform: rotate(45deg);
 }
 
-.description {
+.paid_content {
     margin-top: 20px;
     font-family: sans-serif;
     font-size: 18px;
+    line-height: 25px;
+}
+
+.paid_title {
+    color: #3e3c3c;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.paid_documents {}
+
+.paid_links {}
+
+.paid_links_list {
+    list-style-type: none;
+}
+
+.paid_links_list li{
+    margin-bottom: 10px;
+}
+
+.paid_links_list a {
+    text-decoration: none;
+    color: #939494;
+}
+.paid_links_list a:hover {
+    color: #000000;
+}
+
+.description {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 18px;
+    margin-top: 40px;
 }
 
 .desc-title {
     text-align: center;
-    text-transform: uppercase;
-    margin-bottom: 20px;
+    margin: 10px 0;
 }
 
 .photo_crb img {
     max-width: 100%;
+}
+
+.security p {
+    line-height: 25px;
+    margin-bottom: 10px;
+}
+.security a {
+    color: #939494;
+    text-decoration: none;
+}
+.security a:hover {
+    color: #070707;
+}
+
+.about_document {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.about_document_item {
+    margin: 5px;
+}
+
+.about_document_item a {
+    text-align: center;
+    border-radius: 10px;
+    display: inline-block;
+    background-color: #e7eeee;
+    color: rgb(0, 0, 0);
+    padding: 20px 10px;
+    text-decoration: none;
+}
+.about_document_item a:hover {
+    background-color: #d7e4e4;
 }
 
 .health_list {
@@ -684,9 +750,104 @@ td {
     justify-content: space-between;
 }
 
+.pricelist_wrapper {
+    margin-top: 30px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 20px;
+    line-height: 1;
+}
+
+.pricelist {}
+
+.pricelist_block {
+    cursor: pointer;
+    border: 1px solid #d0d0d0;
+    margin-bottom: 10px;
+    min-height: 50px;
+    padding: 10px;
+}
+
+.pricelist_block_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price_list_title {
+    flex-basis: 95%;
+    text-shadow: 3px 3px 8px #8be0e5;
+}
+
+.price_list_plus {
+    height: 26px;
+    width: 26px;
+    position: relative;
+}
+
+.price_list_plus span {
+    height: 2px;
+    width: 100%;
+    background-color: #808080;
+    position: absolute;
+    left: 0;
+    top: 13px;
+    transition: .5s;
+}
+.price_list_plus span:after {
+    content: '';
+    height: 2px;
+    width: 100%;
+    background-color: #808080;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transform: rotate(90deg);
+    transition: .5s;
+}
+
+.price_list_open {
+    transform: rotate(45deg);
+}
+
+.pricelist_price_wrapper {
+    display: none;
+    transition: .5s;
+}
+.pricelist_price_active {
+    display: block;
+    height: 0;
+    overflow: hidden;
+}
+.pricelist_price_down {
+    margin-top: 10px;
+}
+
+.pricelist_price {}
+
+.pricelist_price_item {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+.pricelist_price_item:nth-child(odd) {
+    background-color: #a4edf082;
+}
+
+.pricelist_price_item p:last-child{
+    margin-left: 10px;
+    align-self: center;
+}
+.pricelist_price_center {
+    justify-content: center;
+}
+
 @media (max-width: 660px) {
     .icon {
         justify-content: flex-start;
+    }
+
+    .pricelist_wrapper, .secondary_menu {
+        font-size: 15px;
     }
 }
 
@@ -863,8 +1024,12 @@ td {
         width: 740px;
     }
 
-    .description {
-        margin-top: 70px;
+    .paid_content {
+        margin-top: 10px;
+    }
+
+    .paid_title {
+        margin-bottom: 5px;
     }
 }
 

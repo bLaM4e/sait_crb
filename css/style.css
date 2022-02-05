@@ -367,64 +367,70 @@
 
 .doctors {
     font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
-    margin-top: 10px;
-    display: flex;
+    font-size: 17px;
+    margin-top: 20px;
 }
 
 .persons {
-    width: 85%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.data-pers {
+.doctors_wrapper {
     background-color: #f6f5f5;
-    /* height: 400px;
-    flex: 1 0 15%; */
-    margin: 10px 10px 0 10px;
+    flex: 0 0 370px;
+    height: 200px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #000000;
+    margin: 0 0 25px 0;
 }
 
-/* .photo-pers {
-    width: 40%;
-    background: url(../images/man_silhouette.jpg) center no-repeat;
-    background-size: cover;
-} */
-
-.desc-pers {
+.doctors_item {
     display: flex;
+    height: 100%;
 }
 
-.person_name {
-    border-right: 1px solid #dadada;
+.doctors_name {
+    flex: 0 0 40%;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    border-right: 1px solid #dadada;
+    padding: 5px;
+}
+.doctors_name p:first-child {
+    line-height: 20px;
+    margin-bottom: 5px;
+}
+.doctors_name p:last-child {
+    font-size: 14px;
+    font-weight: 700;
+}
+.doctors_name span {
+    font-size: 19px;
+    font-weight: 700;
 }
 
-.d-none {
-    margin-top: 10px;
-    padding-top: 10px;
+.doctors_desc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5px;
 }
-
-.d-none span {
-    font-size: 17px;
-    line-height: 23px;
+.doctors_desc p {
     color: #919695;
 }
-
-.d-none h6 {
-    font-weight: 700;
+.doctors_desc h5 {
     font-size: 17px;
     line-height: 23px;
-    color: #000;
 }
 
-.speciality {
+/* .speciality {
     margin-left: 5px;
     width: 15%;
     list-style-type: none;
-}
+} */
 
 .spec-title {
     font-family: sans-serif;
@@ -734,7 +740,7 @@ td {
 }
 
 .health_list {
-    list-style-type: disclosure-closed;
+    list-style-type: circle;
     padding-left: revert;
 }
 
@@ -760,7 +766,11 @@ td {
     line-height: 1;
 }
 
-.pricelist {}
+.pricelist {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 18px;
+    margin-top: 30px;
+}
 
 .pricelist_block {
     cursor: pointer;
@@ -842,6 +852,31 @@ td {
 }
 .pricelist_price_center {
     justify-content: center;
+}
+
+.proph_content {
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    font-size: 18px;
+    margin: 20px 0;
+}
+
+.proph_text {}
+
+.proph_theme {
+    margin-bottom: 20px;
+}
+.proph_theme h5 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.proph_list {
+    margin: 0 0 5px 30px;
+}
+
+.proph_list_dash {
+    margin: 0 0 5px 30px;
+    list-style-type: circle;
 }
 
 @media (max-width: 660px) {
@@ -1033,6 +1068,25 @@ td {
 
     .paid_title {
         margin-bottom: 5px;
+    }
+
+    .persons {
+        justify-content: space-around;
+    }
+
+    .doctors_wrapper {
+        flex: 0 0 250px;
+        height: 300px;
+        margin: 0 0 20px 0;
+    }
+    
+    .doctors_item {
+        flex-direction: column;
+    }
+    
+    .doctors_name {
+        border-right: none;
+        border-bottom: 1px solid #dadada;
     }
 }
 

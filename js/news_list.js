@@ -4,6 +4,8 @@ const blockNews = {
     init() {
         const news = document.querySelector('.news');
 
+        this.openBlockHash();
+
         news.addEventListener('click', event => {
             if (event.target.classList[0] !== 'news_title') return;
 
@@ -45,8 +47,6 @@ const blockNews = {
         const newsTitleAll = document.querySelectorAll('.news_active');
         const newsTextAll = document.querySelectorAll('.news_text_open');
 
-        console.log(newsTitleAll)
-
         for (let i = 0; i < newsTitleAll.length; i++) {
             const el = newsTitleAll[i];
             if (event.target === el) continue;
@@ -55,6 +55,21 @@ const blockNews = {
                 el.classList.remove('news_active');
                 this.visibleNo(newsTextAll[i]);
             }
+        }
+    },
+
+    openBlockHash() {
+        const locationHash = document.location.hash;
+        
+        if (locationHash !== '') {
+            const elId = locationHash.split('#')[1];
+            const el = document.getElementById(elId);
+            const elTitle = el.querySelector('.news_title')
+            const elText = el.querySelector('.news_text');
+
+            elTitle.classList.toggle('news_active');
+
+            this.visibleOk(elText);
         }
     },
 }
